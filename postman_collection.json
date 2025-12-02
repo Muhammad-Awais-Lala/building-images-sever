@@ -1,0 +1,108 @@
+{
+    "info": {
+        "name": "Construction Planner - Images API",
+        "description": "API endpoints for generating building images",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Health Check",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/health",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "health"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Generate Images - 2 Floors",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"plot_depth_ft\": 43.6,\n  \"plot_width_ft\": 25,\n  \"number_of_floors\": 2,\n  \"kitchen_type\": \"open\",\n  \"architectural_style\": \"Traditional\",\n  \"extra_features\": \"\",\n  \"floors_configuration\": [\n    {\n      \"floorNumber\": 1,\n      \"floorName\": \"Ground Floor\",\n      \"bedrooms\": 2,\n      \"bathrooms\": 2,\n      \"livingRooms\": \"1\",\n      \"kitchens\": \"1\",\n      \"drawingDining\": \"Required\",\n      \"garage\": \"Required\"\n    },\n    {\n      \"floorNumber\": 2,\n      \"floorName\": \"1st Floor\",\n      \"bedrooms\": \"3\",\n      \"bathrooms\": \"1\",\n      \"livingRooms\": \"1\",\n      \"kitchens\": \"1\",\n      \"drawingDining\": \"Required\"\n    }\n  ]\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/generate-images",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "generate-images"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Generate Images - 1 Floor",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"plot_depth_ft\": 30,\n  \"plot_width_ft\": 20,\n  \"number_of_floors\": 1,\n  \"kitchen_type\": \"closed\",\n  \"architectural_style\": \"Modern\",\n  \"extra_features\": \"Balcony\",\n  \"floors_configuration\": [\n    {\n      \"floorNumber\": 1,\n      \"floorName\": \"Ground Floor\",\n      \"bedrooms\": 2,\n      \"bathrooms\": 1,\n      \"livingRooms\": \"1\",\n      \"kitchens\": \"1\",\n      \"drawingDining\": \"Required\",\n      \"garage\": \"Not Required\"\n    }\n  ]\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/generate-images",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "generate-images"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Generate Images - 3 Floors",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"plot_depth_ft\": 50,\n  \"plot_width_ft\": 30,\n  \"number_of_floors\": 3,\n  \"kitchen_type\": \"open\",\n  \"architectural_style\": \"Contemporary\",\n  \"extra_features\": \"Rooftop terrace, Solar panels\",\n  \"floors_configuration\": [\n    {\n      \"floorNumber\": 1,\n      \"floorName\": \"Ground Floor\",\n      \"bedrooms\": 1,\n      \"bathrooms\": 1,\n      \"livingRooms\": \"1\",\n      \"kitchens\": \"1\",\n      \"drawingDining\": \"Required\",\n      \"garage\": \"Required\"\n    },\n    {\n      \"floorNumber\": 2,\n      \"floorName\": \"1st Floor\",\n      \"bedrooms\": \"2\",\n      \"bathrooms\": \"2\",\n      \"livingRooms\": \"1\",\n      \"kitchens\": \"1\",\n      \"drawingDining\": \"Required\"\n    },\n    {\n      \"floorNumber\": 3,\n      \"floorName\": \"2nd Floor\",\n      \"bedrooms\": \"2\",\n      \"bathrooms\": \"1\",\n      \"livingRooms\": \"1\",\n      \"kitchens\": \"0\",\n      \"drawingDining\": \"Not Required\"\n    }\n  ]\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/generate-images",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "generate-images"
+                    ]
+                }
+            }
+        }
+    ]
+}
